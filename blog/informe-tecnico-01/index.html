@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <script>document.documentElement.classList.add("js");</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0912" />
+    <link rel="icon" href="../../favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+    <link href="../../_app/immutable/entry/start.C_ji6uRD.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BPRgHqls.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/MwFUhttO.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/-UyI9lYi.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Dgnofkfo.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.CMrkdZSC.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DsnmJJEf.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/eiNhF_HA.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/B8r9OYyc.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Dru3IKKa.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/0.DFyDA6Xi.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CtgAwrWz.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BNebqK40.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/D0O7lKIT.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Bfo4kyxZ.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/B04ZawnV.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DpcAlEVB.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/5.MpcJtgB4.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/ZSm0M-sG.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CJP9e6hx.js" rel="modulepreload">
+		<!--1teoznn--><meta name="description" content="Primer informe de la serie. Qué hemos construido hasta ahora en Rivuko y por qué, sin entrar en el código."/> <meta property="og:type" content="article"/> <meta property="og:title" content="Los cimientos de Rivuko"/> <meta property="og:description" content="Primer informe de la serie. Qué hemos construido hasta ahora en Rivuko y por qué, sin entrar en el código."/><!----><title>Los cimientos de Rivuko · Blog · Rivuko</title>
+		<link href="../../_app/immutable/assets/0.CQcA4WLW.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents"><!--[--><!--[0--><!--[--><header class="fixed inset-x-0 top-0 z-50 border-b-4 transition-colors duration-300 border-transparent"><nav class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8"><a href="../../" aria-label="Rivuko, inicio"><span class="inline-flex items-center gap-2.5 "><img src="../../logo.png" alt="" width="32" height="32" class="size-8"/> <!--[0--><span class="font-px text-lg leading-none tracking-wide">Rivuko</span><!--]--></span><!----></a> <ul class="hidden items-center gap-7 font-px text-[0.8rem] uppercase md:flex"><!--[--><li><a href="../../emulator/" class="group flex items-center gap-1.5 transition-colors text-muted hover:text-text"><span class="size-1.5 bg-gold transition-opacity opacity-0 group-hover:opacity-100" aria-hidden="true"></span> Emulador</a></li><li><a href="../../engine/" class="group flex items-center gap-1.5 transition-colors text-muted hover:text-text"><span class="size-1.5 bg-gold transition-opacity opacity-0 group-hover:opacity-100" aria-hidden="true"></span> Motor</a></li><li><a href="../../client/" class="group flex items-center gap-1.5 transition-colors text-muted hover:text-text"><span class="size-1.5 bg-gold transition-opacity opacity-0 group-hover:opacity-100" aria-hidden="true"></span> Cliente</a></li><li><a href="../../migrator/" class="group flex items-center gap-1.5 transition-colors text-muted hover:text-text"><span class="size-1.5 bg-gold transition-opacity opacity-0 group-hover:opacity-100" aria-hidden="true"></span> Migrador</a></li><li><a href="../../blog/" class="group flex items-center gap-1.5 transition-colors text-muted hover:text-text"><span class="size-1.5 bg-gold transition-opacity opacity-0 group-hover:opacity-100" aria-hidden="true"></span> Blog</a></li><!--]--></ul> <button class="-mr-2 flex h-10 items-center px-2 font-px text-xs uppercase md:hidden" aria-label="Abrir menú" aria-expanded="false">Menú</button></nav></header> <!--[-1--><!--]--><!----> <main><!--[--><div class="fixed inset-x-0 top-16 z-40 h-1 bg-transparent" aria-hidden="true"><div class="h-full origin-left bg-gold" style="transform: scaleX(0)"></div></div> <article class="mx-auto max-w-6xl px-5 pb-28 pt-32 sm:px-8 sm:pt-40"><header data-reveal="" class="border-b-4 border-line pb-12"><a href="../../blog/" class="link font-px text-xs uppercase text-muted">← Blog</a> <h1 class="mt-10 max-w-4xl font-pixel text-[clamp(2.5rem,6.5vw,5rem)] font-bold leading-[0.98]">Los cimientos de Rivuko</h1> <p class="mt-6 max-w-2xl text-xl leading-relaxed text-muted">Primer informe de la serie. Qué hemos construido hasta ahora en Rivuko y por qué, sin entrar en el código.</p></header> <div class="mt-12 grid gap-10 lg:grid-cols-12"><dl class="grid h-fit grid-cols-3 gap-4 font-px text-xs lg:sticky lg:top-28 lg:col-span-3 lg:grid-cols-1 lg:gap-6"><div><dt class="uppercase text-dim">Fecha</dt> <dd class="mt-1"><time datetime="2026-10-20">20 de octubre de 2026</time></dd></div> <div><dt class="uppercase text-dim">Autores</dt> <dd class="mt-1 text-gold">Ruxwez y Martx</dd></div> <div><dt class="uppercase text-dim">Lectura</dt> <dd class="mt-1">6 min</dd></div></dl> <div class="prose min-w-0 max-w-[68ch] lg:col-span-8"><!----><blockquote>
+<p>Este es el primer informe de una serie. Cuenta <strong>qué se ha construido y por
+qué</strong>, sin entrar en el código. Solo cubre una parte del trabajo hecho (los
+cimientos). El resto (el emulador por dentro, los plugins, el motor gráfico
+y el cliente) tendrá su propio informe.</p>
+</blockquote>
+<hr>
+<h2>1. Resumen</h2>
+<p>Rivuko es una <strong>plataforma propia, construida desde cero</strong>: el servidor, el
+motor gráfico, el cliente y el migrador se han diseñado y escrito por nosotros.</p>
+<p>El trabajo se organiza en cuatro piezas:</p>
+<table>
+<thead>
+<tr>
+<th>Pieza</th>
+<th>Tecnología</th>
+<th>Papel</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Rivuko Emulator</strong></td>
+<td>Rust</td>
+<td>El servidor del hotel y su lógica</td>
+</tr>
+<tr>
+<td><strong>Rivuko Engine</strong></td>
+<td>TypeScript</td>
+<td>El motor gráfico del mundo</td>
+</tr>
+<tr>
+<td><strong>Rivuko Client</strong></td>
+<td>SolidJS</td>
+<td>La interfaz, distribuida como librería</td>
+</tr>
+<tr>
+<td><strong>Rivuko Migrator</strong></td>
+<td>Rust</td>
+<td>Traslada un hotel existente a Rivuko</td>
+</tr>
+</tbody></table>
+<p>Todas las piezas se desarrollan juntas, con herramientas compartidas.</p>
+<p><strong>Dónde estamos:</strong> el diseño completo está cerrado y las primeras piezas ya
+funcionan: el protocolo, la base de datos, la configuración y el núcleo del
+servidor. Quedan por llegar los dominios de juego, los plugins, el motor, el
+cliente y el migrador.</p>
+<h2>2. Principios</h2>
+<p>Dos reglas guían todo el proyecto:</p>
+<ol>
+<li><strong>Sin retrocompatibilidad.</strong> Ni Flash, ni el protocolo antiguo, ni el
+esquema antiguo. La única excepción es el migrador, que lee el hotel
+antiguo una vez y desaparece.</li>
+<li><strong>Conservar funcionalidades, no implementaciones.</strong> Todo lo que el hotel
+antiguo sabía hacer debe poder hacerse en Rivuko, pero no
+necesariamente como se hacía.</li>
+</ol>
+<h2>3. Auditoría: saber qué hay antes de tocarlo</h2>
+<p>Antes de escribir una línea nueva se repasó todo lo que un hotel debe saber
+hacer, en siete documentos (emulador, base de datos, protocolo, motor,
+cliente, plugins y funcionalidades).</p>
+<p>El resultado más útil es la <strong>matriz de funcionalidades</strong>: un inventario con
+más de 1 300 filas que dice, para cada cosa que el hotel sabía hacer, si se
+conserva, se cambia o se descarta. Es la fuente de verdad del proyecto: si una
+función está en la matriz, tiene que existir en Rivuko.</p>
+<h2>4. Arquitectura: cuatro piezas, fronteras claras</h2>
+<p>La arquitectura se resume en una idea: <strong>cada pieza tiene un único trabajo y
+una frontera bien definida</strong>.</p>
+<ul>
+<li>El <strong>navegador del jugador</strong> ejecuta el cliente y el motor gráfico.</li>
+<li>El <strong>servidor del hotel</strong> ejecuta el emulador, sus plugins y la base de
+datos PostgreSQL 18.</li>
+<li>Entre ambos hay una única vía de juego: un <strong>WebSocket seguro</strong> con un
+protocolo propio.</li>
+<li>El <strong>panel de administración</strong> del operador (la web de cada hotel) habla
+con el emulador por una <strong>API de administración</strong> aparte, en HTTP y JSON.</li>
+</ul>
+<p>Una consecuencia importante: <strong>la base de datos es exclusiva del emulador</strong>.
+Ni la web ni los plugins la tocan directamente. Esto simplifica la seguridad
+y permite evolucionar el esquema sin romper a nadie.</p>
+<h3>Decisiones destacadas</h3>
+<p>Se han documentado seis decisiones de arquitectura. Tres de ellas, en
+lenguaje llano:</p>
+<p><strong>Un solo contrato para dos lenguajes.</strong> El protocolo se escribe una vez y de
+ahí salen automáticamente los tipos de Rust y de TypeScript. Así servidor y
+cliente no pueden desincronizarse sin que la compilación lo detecte.</p>
+<p><strong>Protobuf como formato de mensajes, elegido con medidas.</strong> Se compararon
+cuatro opciones (Protobuf, MessagePack, FlatBuffers y un formato binario
+propio) en tamaño, velocidad, validación y facilidad para evolucionar. Ganó
+Protobuf porque es el único que cumple todos los requisitos eliminatorios:
+contrato explícito, validación en los dos lados y detección automática de
+cambios que rompen compatibilidad. A cambio, los mensajes ocupan algo más que
+con un formato a mano (en torno a un 34 %), un coste que se asume a
+sabiendas.</p>
+<p><strong>Concurrencia por actores.</strong> Cada sala del hotel es una unidad independiente
+que gestiona su propio estado, y cada jugador conectado tiene su propia
+sesión. Esto evita bloqueos entre salas y hace el comportamiento fácil de
+razonar.</p>
+<h2>5. El protocolo: el idioma del hotel</h2>
+<p>El protocolo de Rivuko es propio y se diseñó desde cero. Sus características
+públicas:</p>
+<ul>
+<li><strong>Esquema explícito y tipado</strong>: cada mensaje tiene campos con nombre y tipo
+reales, no un «orden de llamadas».</li>
+<li><strong>Validación estricta</strong>: lo que no cumple el contrato se rechaza, en el
+servidor y en el cliente.</li>
+<li><strong>Versionado desde el primer día</strong>, con comprobación automática de cambios
+incompatibles.</li>
+<li><strong>Cubre todo el hotel</strong>: 39 archivos de contrato organizados por dominio
+(salas, muebles, catálogo, inventario, amigos, grupos, mensajería,
+mercadillo, comercio, mascotas, bots, logros, juegos, moderación,
+cámara, automatismos y más).</li>
+<li><strong>API de administración independiente</strong>: cuentas, contenido, configuración,
+moderación, estado y gestión del hotel, para que cada operador construya su
+propio panel.</li>
+</ul>
+<p>Para comprobar que Rust y TypeScript se entienden, se generaron <strong>9 352
+vectores de prueba compartidos</strong> que ambos lados deben leer exactamente igual,
+además de pruebas de fuzzing que lanzan datos aleatorios y malformados contra
+el decodificador.</p>
+<h2>6. Base de datos: un esquema nuevo</h2>
+<p>El esquema de PostgreSQL 18 se diseñó desde cero, con <strong>190 tablas</strong>, y se
+acompaña de:</p>
+<ul>
+<li>consultas críticas <strong>verificadas al compilar</strong>: si una consulta no encaja
+con el esquema, el proyecto no compila;</li>
+<li><strong>planes de ejecución revisados</strong> sobre volúmenes sintéticos de datos, para
+detectar consultas lentas antes de que existan usuarios;</li>
+<li>un <strong>paquete de contenido</strong> que separa lo que el operador publica
+(catálogo, muebles, textos) de los datos de los jugadores;</li>
+<li>la correspondencia documentada entre el esquema antiguo y el nuevo, que
+usará el migrador.</li>
+</ul>
+<h2>7. Configuración: dos archivos, sin sorpresas</h2>
+<p>Un hotel se configura con dos archivos y nada más:</p>
+<ul>
+<li><strong><code>config.toml</code></strong>: lo que el operador ajusta (límites, monedas, ritmos,
+comandos, plugins).</li>
+<li><strong><code>.env</code></strong>: los secretos (contraseñas, claves), nunca mezclados con lo
+anterior.</li>
+</ul>
+<p>Hay un orden de precedencia claro, validación al arrancar con mensajes que
+indican qué clave está mal, y un comando para comprobar la configuración sin
+arrancar el servidor.</p>
+<h2>8. El núcleo del emulador: ya conecta</h2>
+<p>Lo último en completarse es el <strong>núcleo del servidor del juego</strong>. Hoy el
+emulador ya puede:</p>
+<ul>
+<li>arrancar y <strong>apagarse de forma ordenada</strong>, guardando lo pendiente;</li>
+<li>aceptar conexiones WebSocket seguras (con TLS opcional) y validar el origen
+y la IP real tras un proxy;</li>
+<li><strong>autenticar con tickets de un solo uso</strong> de 60 segundos;</li>
+<li>mantener la conexión con latido, límites de ritmo y de tamaño y cierres con
+códigos claros;</li>
+<li><strong>proteger contra abusos</strong>: límites de conexiones nuevas, de conexiones sin
+autenticar y de intentos de saludo fallidos;</li>
+<li>impedir sesiones duplicadas: si el mismo usuario entra desde otro sitio, la
+sesión anterior termina de guardar antes de que empiece la nueva;</li>
+<li>ofrecer comandos de línea: <code>serve</code>, <code>migrate</code>, <code>config check</code> y <code>ticket</code>.</li>
+</ul>
+<p>Este núcleo pasó además por una <strong>revisión adversaria</strong> (un revisor sin el
+contexto de la implementación) y por pruebas de mutantes sobre las partes
+críticas, para comprobar que las pruebas realmente detectan los fallos.</p>
+<h2>9. Calidad: cómo se vigila</h2>
+<ul>
+<li>Formato y análisis estático sin avisos en Rust y TypeScript.</li>
+<li>Pruebas automáticas contra una base de datos PostgreSQL 18 real, no contra
+simulaciones.</li>
+<li>Comprobación de <strong>licencias</strong> de todas las dependencias: solo licencias
+permisivas en el servidor.</li>
+<li>Integración continua que ejecuta todo lo anterior en cada cambio.</li>
+<li>Documentación comprobada: más de 3 900 enlaces y 156 diagramas verificados
+automáticamente.</li>
+</ul>
+<h2>10. Lo que viene</h2>
+<p>Este informe cubre una parte de lo hecho. En próximas entregas:</p>
+<ol>
+<li><strong>Los dominios del emulador</strong>: salas, movimiento, muebles, catálogo,
+social, economía...</li>
+<li><strong>El sistema de plugins</strong>: componentes WebAssembly con permisos reales y
+91 puntos de extensión.</li>
+<li><strong>El motor gráfico y el cliente</strong>: el diseño visual completo, con un
+sistema de ventanas propio.</li>
+<li><strong>El migrador</strong>: trasladar un hotel existente a Rivuko.</li>
+</ol>
+<hr>
+<p><em>Rivuko es software propietario de Faladium Studios.</em></p>
+<!----></div></div> <footer class="mt-20 border-t-4 border-line pt-8 lg:ml-[25%]"><a href="../../blog/" class="link font-px text-xs uppercase">← Volver al blog</a></footer></article><!--]--><!----></main> <footer class="relative overflow-hidden border-t-4 border-line bg-night"><div class="pixel-grid absolute inset-0 opacity-60" aria-hidden="true"></div> <div class="relative mx-auto max-w-6xl px-5 pb-10 pt-20 sm:px-8"><div class="grid gap-12 md:grid-cols-12"><div class="md:col-span-5"><span class="inline-flex items-center gap-2.5 "><img src="../../logo.png" alt="" width="32" height="32" class="size-8"/> <!--[0--><span class="font-px text-lg leading-none tracking-wide">Rivuko</span><!--]--></span><!----> <p class="mt-5 max-w-sm leading-relaxed text-muted">Plataforma de hotel virtual en desarrollo.</p></div> <nav class="md:col-span-3" aria-label="Pie de página"><p class="font-px text-xs uppercase text-dim">Plantas</p> <ul class="mt-4 space-y-2"><!--[--><li><a href="../../emulator/" class="link">Emulador</a></li><li><a href="../../engine/" class="link">Motor</a></li><li><a href="../../client/" class="link">Cliente</a></li><li><a href="../../migrator/" class="link">Migrador</a></li><li><a href="../../blog/" class="link">Blog</a></li><!--]--></ul></nav> <div class="md:col-span-4"><p class="font-px text-xs uppercase text-dim">Créditos</p> <ul class="mt-4 flex gap-6"><!--[--><li><a href="https://github.com/ruxwez" target="_blank" rel="noopener" class="group flex items-center gap-3"><svg viewBox="0 0 12 16" class="h-10 w-auto" shape-rendering="crispEdges" aria-hidden="true"><!--[--><rect x="4" y="0" width="4" height="1" fill="#07060c"></rect><rect x="3" y="1" width="1" height="1" fill="#07060c"></rect><rect x="4" y="1" width="4" height="1" fill="#ffd23f"></rect><rect x="8" y="1" width="1" height="1" fill="#07060c"></rect><rect x="2" y="2" width="1" height="1" fill="#07060c"></rect><rect x="3" y="2" width="6" height="1" fill="#ffd23f"></rect><rect x="9" y="2" width="1" height="1" fill="#07060c"></rect><rect x="2" y="3" width="1" height="1" fill="#07060c"></rect><rect x="3" y="3" width="1" height="1" fill="#ffd23f"></rect><rect x="4" y="3" width="4" height="1" fill="#f2c29b"></rect><rect x="8" y="3" width="1" height="1" fill="#07060c"></rect><rect x="2" y="4" width="1" height="1" fill="#07060c"></rect><rect x="3" y="4" width="1" height="1" fill="#f2c29b"></rect><rect x="4" y="4" width="1" height="1" fill="#07060c"></rect><rect x="5" y="4" width="2" height="1" fill="#f2c29b"></rect><rect x="7" y="4" width="1" height="1" fill="#07060c"></rect><rect x="8" y="4" width="1" height="1" fill="#f2c29b"></rect><rect x="9" y="4" width="1" height="1" fill="#07060c"></rect><rect x="2" y="5" width="1" height="1" fill="#07060c"></rect><rect x="3" y="5" width="6" height="1" fill="#f2c29b"></rect><rect x="9" y="5" width="1" height="1" fill="#07060c"></rect><rect x="3" y="6" width="1" height="1" fill="#07060c"></rect><rect x="4" y="6" width="1" height="1" fill="#f2c29b"></rect><rect x="5" y="6" width="2" height="1" fill="#c97b6b"></rect><rect x="7" y="6" width="1" height="1" fill="#f2c29b"></rect><rect x="8" y="6" width="1" height="1" fill="#07060c"></rect><rect x="4" y="7" width="4" height="1" fill="#07060c"></rect><rect x="2" y="8" width="1" height="1" fill="#07060c"></rect><rect x="3" y="8" width="7" height="1" fill="#ff7a3d"></rect><rect x="10" y="8" width="1" height="1" fill="#07060c"></rect><rect x="1" y="9" width="1" height="1" fill="#07060c"></rect><rect x="2" y="9" width="1" height="1" fill="#f2c29b"></rect><rect x="3" y="9" width="1" height="1" fill="#07060c"></rect><rect x="4" y="9" width="2" height="1" fill="#ff7a3d"></rect><rect x="6" y="9" width="1" height="1" fill="#ffe1cf"></rect><rect x="7" y="9" width="2" height="1" fill="#ff7a3d"></rect><rect x="9" y="9" width="1" height="1" fill="#07060c"></rect><rect x="10" y="9" width="1" height="1" fill="#f2c29b"></rect><rect x="11" y="9" width="1" height="1" fill="#07060c"></rect><rect x="1" y="10" width="1" height="1" fill="#07060c"></rect><rect x="2" y="10" width="1" height="1" fill="#f2c29b"></rect><rect x="3" y="10" width="1" height="1" fill="#07060c"></rect><rect x="4" y="10" width="5" height="1" fill="#ff7a3d"></rect><rect x="9" y="10" width="1" height="1" fill="#07060c"></rect><rect x="10" y="10" width="1" height="1" fill="#f2c29b"></rect><rect x="11" y="10" width="1" height="1" fill="#07060c"></rect><rect x="2" y="11" width="2" height="1" fill="#07060c"></rect><rect x="4" y="11" width="5" height="1" fill="#ff7a3d"></rect><rect x="9" y="11" width="2" height="1" fill="#07060c"></rect><rect x="3" y="12" width="1" height="1" fill="#07060c"></rect><rect x="4" y="12" width="5" height="1" fill="#3b3656"></rect><rect x="9" y="12" width="1" height="1" fill="#07060c"></rect><rect x="3" y="13" width="1" height="1" fill="#07060c"></rect><rect x="4" y="13" width="2" height="1" fill="#3b3656"></rect><rect x="6" y="13" width="1" height="1" fill="#07060c"></rect><rect x="7" y="13" width="2" height="1" fill="#3b3656"></rect><rect x="9" y="13" width="1" height="1" fill="#07060c"></rect><rect x="3" y="14" width="1" height="1" fill="#07060c"></rect><rect x="4" y="14" width="2" height="1" fill="#3b3656"></rect><rect x="6" y="14" width="1" height="1" fill="#07060c"></rect><rect x="7" y="14" width="2" height="1" fill="#3b3656"></rect><rect x="9" y="14" width="1" height="1" fill="#07060c"></rect><rect x="2" y="15" width="4" height="1" fill="#07060c"></rect><rect x="7" y="15" width="4" height="1" fill="#07060c"></rect><!--]--></svg><!----> <span class="link font-pixel text-lg font-semibold group-hover:text-gold">Ruxwez</span></a></li><li><a href="https://github.com/benz-dev" target="_blank" rel="noopener" class="group flex items-center gap-3"><svg viewBox="0 0 12 16" class="h-10 w-auto" shape-rendering="crispEdges" aria-hidden="true"><!--[--><rect x="4" y="0" width="4" height="1" fill="#07060c"></rect><rect x="3" y="1" width="1" height="1" fill="#07060c"></rect><rect x="4" y="1" width="4" height="1" fill="#6b4a3a"></rect><rect x="8" y="1" width="1" height="1" fill="#07060c"></rect><rect x="2" y="2" width="1" height="1" fill="#07060c"></rect><rect x="3" y="2" width="6" height="1" fill="#6b4a3a"></rect><rect x="9" y="2" width="1" height="1" fill="#07060c"></rect><rect x="2" y="3" width="1" height="1" fill="#07060c"></rect><rect x="3" y="3" width="2" height="1" fill="#6b4a3a"></rect><rect x="5" y="3" width="4" height="1" fill="#e0a982"></rect><rect x="9" y="3" width="1" height="1" fill="#6b4a3a"></rect><rect x="10" y="3" width="1" height="1" fill="#07060c"></rect><rect x="2" y="4" width="1" height="1" fill="#07060c"></rect><rect x="3" y="4" width="1" height="1" fill="#e0a982"></rect><rect x="4" y="4" width="1" height="1" fill="#07060c"></rect><rect x="5" y="4" width="2" height="1" fill="#e0a982"></rect><rect x="7" y="4" width="1" height="1" fill="#07060c"></rect><rect x="8" y="4" width="1" height="1" fill="#e0a982"></rect><rect x="9" y="4" width="1" height="1" fill="#07060c"></rect><rect x="2" y="5" width="1" height="1" fill="#07060c"></rect><rect x="3" y="5" width="6" height="1" fill="#e0a982"></rect><rect x="9" y="5" width="1" height="1" fill="#07060c"></rect><rect x="3" y="6" width="1" height="1" fill="#07060c"></rect><rect x="4" y="6" width="1" height="1" fill="#e0a982"></rect><rect x="5" y="6" width="2" height="1" fill="#b0685a"></rect><rect x="7" y="6" width="1" height="1" fill="#e0a982"></rect><rect x="8" y="6" width="1" height="1" fill="#07060c"></rect><rect x="4" y="7" width="4" height="1" fill="#07060c"></rect><rect x="2" y="8" width="1" height="1" fill="#07060c"></rect><rect x="3" y="8" width="7" height="1" fill="#3ad6e8"></rect><rect x="10" y="8" width="1" height="1" fill="#07060c"></rect><rect x="1" y="9" width="1" height="1" fill="#07060c"></rect><rect x="2" y="9" width="1" height="1" fill="#e0a982"></rect><rect x="3" y="9" width="1" height="1" fill="#07060c"></rect><rect x="4" y="9" width="2" height="1" fill="#3ad6e8"></rect><rect x="6" y="9" width="1" height="1" fill="#d9fbff"></rect><rect x="7" y="9" width="2" height="1" fill="#3ad6e8"></rect><rect x="9" y="9" width="1" height="1" fill="#07060c"></rect><rect x="10" y="9" width="1" height="1" fill="#e0a982"></rect><rect x="11" y="9" width="1" height="1" fill="#07060c"></rect><rect x="1" y="10" width="1" height="1" fill="#07060c"></rect><rect x="2" y="10" width="1" height="1" fill="#e0a982"></rect><rect x="3" y="10" width="1" height="1" fill="#07060c"></rect><rect x="4" y="10" width="5" height="1" fill="#3ad6e8"></rect><rect x="9" y="10" width="1" height="1" fill="#07060c"></rect><rect x="10" y="10" width="1" height="1" fill="#e0a982"></rect><rect x="11" y="10" width="1" height="1" fill="#07060c"></rect><rect x="2" y="11" width="2" height="1" fill="#07060c"></rect><rect x="4" y="11" width="5" height="1" fill="#3ad6e8"></rect><rect x="9" y="11" width="2" height="1" fill="#07060c"></rect><rect x="3" y="12" width="1" height="1" fill="#07060c"></rect><rect x="4" y="12" width="5" height="1" fill="#2a2540"></rect><rect x="9" y="12" width="1" height="1" fill="#07060c"></rect><rect x="3" y="13" width="1" height="1" fill="#07060c"></rect><rect x="4" y="13" width="2" height="1" fill="#2a2540"></rect><rect x="6" y="13" width="1" height="1" fill="#07060c"></rect><rect x="7" y="13" width="2" height="1" fill="#2a2540"></rect><rect x="9" y="13" width="1" height="1" fill="#07060c"></rect><rect x="3" y="14" width="1" height="1" fill="#07060c"></rect><rect x="4" y="14" width="2" height="1" fill="#2a2540"></rect><rect x="6" y="14" width="1" height="1" fill="#07060c"></rect><rect x="7" y="14" width="2" height="1" fill="#2a2540"></rect><rect x="9" y="14" width="1" height="1" fill="#07060c"></rect><rect x="2" y="15" width="4" height="1" fill="#07060c"></rect><rect x="7" y="15" width="4" height="1" fill="#07060c"></rect><!--]--></svg><!----> <span class="link font-pixel text-lg font-semibold group-hover:text-gold">Martx</span></a></li><!--]--></ul></div></div> <p class="mt-20 select-none font-px text-[clamp(3rem,16vw,12rem)] leading-[0.8] text-text/[0.06]" aria-hidden="true">Rivuko</p> <div class="mt-8 flex flex-col gap-2 border-t-4 border-line pt-6 font-px text-[0.7rem] uppercase text-dim sm:flex-row sm:justify-between"><span>© 2026 Rivuko · Hecho por Ruxwez y Martx</span> <span>Software propietario de Faladium Studios</span></div></div></footer><!----> <div class="pointer-events-none fixed inset-0 z-[100] grid" style="grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(8, 1fr)" aria-hidden="true"><!--[--><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><span class="scale-0 bg-gold [&amp;:nth-child(3n)]:bg-violet [&amp;:nth-child(5n)]:bg-void"></span><!--]--></div><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_pk8cze = {
+						base: new URL("../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.C_ji6uRD.js"),
+						import("../../_app/immutable/entry/app.CMrkdZSC.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data: [null,{type:"data",data:{post:{slug:"informe-tecnico-01",title:"Los cimientos de Rivuko",date:"2026-10-20",dateLabel:"20 de octubre de 2026",summary:"Primer informe de la serie. Qué hemos construido hasta ahora en Rivuko y por qué, sin entrar en el código.",authors:"Ruxwez y Martx",minutes:6,html:"\u003Cblockquote>\n\u003Cp>Este es el primer informe de una serie. Cuenta \u003Cstrong>qué se ha construido y por\nqué\u003C/strong>, sin entrar en el código. Solo cubre una parte del trabajo hecho (los\ncimientos). El resto (el emulador por dentro, los plugins, el motor gráfico\ny el cliente) tendrá su propio informe.\u003C/p>\n\u003C/blockquote>\n\u003Chr>\n\u003Ch2>1. Resumen\u003C/h2>\n\u003Cp>Rivuko es una \u003Cstrong>plataforma propia, construida desde cero\u003C/strong>: el servidor, el\nmotor gráfico, el cliente y el migrador se han diseñado y escrito por nosotros.\u003C/p>\n\u003Cp>El trabajo se organiza en cuatro piezas:\u003C/p>\n\u003Ctable>\n\u003Cthead>\n\u003Ctr>\n\u003Cth>Pieza\u003C/th>\n\u003Cth>Tecnología\u003C/th>\n\u003Cth>Papel\u003C/th>\n\u003C/tr>\n\u003C/thead>\n\u003Ctbody>\u003Ctr>\n\u003Ctd>\u003Cstrong>Rivuko Emulator\u003C/strong>\u003C/td>\n\u003Ctd>Rust\u003C/td>\n\u003Ctd>El servidor del hotel y su lógica\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Rivuko Engine\u003C/strong>\u003C/td>\n\u003Ctd>TypeScript\u003C/td>\n\u003Ctd>El motor gráfico del mundo\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Rivuko Client\u003C/strong>\u003C/td>\n\u003Ctd>SolidJS\u003C/td>\n\u003Ctd>La interfaz, distribuida como librería\u003C/td>\n\u003C/tr>\n\u003Ctr>\n\u003Ctd>\u003Cstrong>Rivuko Migrator\u003C/strong>\u003C/td>\n\u003Ctd>Rust\u003C/td>\n\u003Ctd>Traslada un hotel existente a Rivuko\u003C/td>\n\u003C/tr>\n\u003C/tbody>\u003C/table>\n\u003Cp>Todas las piezas se desarrollan juntas, con herramientas compartidas.\u003C/p>\n\u003Cp>\u003Cstrong>Dónde estamos:\u003C/strong> el diseño completo está cerrado y las primeras piezas ya\nfuncionan: el protocolo, la base de datos, la configuración y el núcleo del\nservidor. Quedan por llegar los dominios de juego, los plugins, el motor, el\ncliente y el migrador.\u003C/p>\n\u003Ch2>2. Principios\u003C/h2>\n\u003Cp>Dos reglas guían todo el proyecto:\u003C/p>\n\u003Col>\n\u003Cli>\u003Cstrong>Sin retrocompatibilidad.\u003C/strong> Ni Flash, ni el protocolo antiguo, ni el\nesquema antiguo. La única excepción es el migrador, que lee el hotel\nantiguo una vez y desaparece.\u003C/li>\n\u003Cli>\u003Cstrong>Conservar funcionalidades, no implementaciones.\u003C/strong> Todo lo que el hotel\nantiguo sabía hacer debe poder hacerse en Rivuko, pero no\nnecesariamente como se hacía.\u003C/li>\n\u003C/ol>\n\u003Ch2>3. Auditoría: saber qué hay antes de tocarlo\u003C/h2>\n\u003Cp>Antes de escribir una línea nueva se repasó todo lo que un hotel debe saber\nhacer, en siete documentos (emulador, base de datos, protocolo, motor,\ncliente, plugins y funcionalidades).\u003C/p>\n\u003Cp>El resultado más útil es la \u003Cstrong>matriz de funcionalidades\u003C/strong>: un inventario con\nmás de 1 300 filas que dice, para cada cosa que el hotel sabía hacer, si se\nconserva, se cambia o se descarta. Es la fuente de verdad del proyecto: si una\nfunción está en la matriz, tiene que existir en Rivuko.\u003C/p>\n\u003Ch2>4. Arquitectura: cuatro piezas, fronteras claras\u003C/h2>\n\u003Cp>La arquitectura se resume en una idea: \u003Cstrong>cada pieza tiene un único trabajo y\nuna frontera bien definida\u003C/strong>.\u003C/p>\n\u003Cul>\n\u003Cli>El \u003Cstrong>navegador del jugador\u003C/strong> ejecuta el cliente y el motor gráfico.\u003C/li>\n\u003Cli>El \u003Cstrong>servidor del hotel\u003C/strong> ejecuta el emulador, sus plugins y la base de\ndatos PostgreSQL 18.\u003C/li>\n\u003Cli>Entre ambos hay una única vía de juego: un \u003Cstrong>WebSocket seguro\u003C/strong> con un\nprotocolo propio.\u003C/li>\n\u003Cli>El \u003Cstrong>panel de administración\u003C/strong> del operador (la web de cada hotel) habla\ncon el emulador por una \u003Cstrong>API de administración\u003C/strong> aparte, en HTTP y JSON.\u003C/li>\n\u003C/ul>\n\u003Cp>Una consecuencia importante: \u003Cstrong>la base de datos es exclusiva del emulador\u003C/strong>.\nNi la web ni los plugins la tocan directamente. Esto simplifica la seguridad\ny permite evolucionar el esquema sin romper a nadie.\u003C/p>\n\u003Ch3>Decisiones destacadas\u003C/h3>\n\u003Cp>Se han documentado seis decisiones de arquitectura. Tres de ellas, en\nlenguaje llano:\u003C/p>\n\u003Cp>\u003Cstrong>Un solo contrato para dos lenguajes.\u003C/strong> El protocolo se escribe una vez y de\nahí salen automáticamente los tipos de Rust y de TypeScript. Así servidor y\ncliente no pueden desincronizarse sin que la compilación lo detecte.\u003C/p>\n\u003Cp>\u003Cstrong>Protobuf como formato de mensajes, elegido con medidas.\u003C/strong> Se compararon\ncuatro opciones (Protobuf, MessagePack, FlatBuffers y un formato binario\npropio) en tamaño, velocidad, validación y facilidad para evolucionar. Ganó\nProtobuf porque es el único que cumple todos los requisitos eliminatorios:\ncontrato explícito, validación en los dos lados y detección automática de\ncambios que rompen compatibilidad. A cambio, los mensajes ocupan algo más que\ncon un formato a mano (en torno a un 34 %), un coste que se asume a\nsabiendas.\u003C/p>\n\u003Cp>\u003Cstrong>Concurrencia por actores.\u003C/strong> Cada sala del hotel es una unidad independiente\nque gestiona su propio estado, y cada jugador conectado tiene su propia\nsesión. Esto evita bloqueos entre salas y hace el comportamiento fácil de\nrazonar.\u003C/p>\n\u003Ch2>5. El protocolo: el idioma del hotel\u003C/h2>\n\u003Cp>El protocolo de Rivuko es propio y se diseñó desde cero. Sus características\npúblicas:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>Esquema explícito y tipado\u003C/strong>: cada mensaje tiene campos con nombre y tipo\nreales, no un «orden de llamadas».\u003C/li>\n\u003Cli>\u003Cstrong>Validación estricta\u003C/strong>: lo que no cumple el contrato se rechaza, en el\nservidor y en el cliente.\u003C/li>\n\u003Cli>\u003Cstrong>Versionado desde el primer día\u003C/strong>, con comprobación automática de cambios\nincompatibles.\u003C/li>\n\u003Cli>\u003Cstrong>Cubre todo el hotel\u003C/strong>: 39 archivos de contrato organizados por dominio\n(salas, muebles, catálogo, inventario, amigos, grupos, mensajería,\nmercadillo, comercio, mascotas, bots, logros, juegos, moderación,\ncámara, automatismos y más).\u003C/li>\n\u003Cli>\u003Cstrong>API de administración independiente\u003C/strong>: cuentas, contenido, configuración,\nmoderación, estado y gestión del hotel, para que cada operador construya su\npropio panel.\u003C/li>\n\u003C/ul>\n\u003Cp>Para comprobar que Rust y TypeScript se entienden, se generaron \u003Cstrong>9 352\nvectores de prueba compartidos\u003C/strong> que ambos lados deben leer exactamente igual,\nademás de pruebas de fuzzing que lanzan datos aleatorios y malformados contra\nel decodificador.\u003C/p>\n\u003Ch2>6. Base de datos: un esquema nuevo\u003C/h2>\n\u003Cp>El esquema de PostgreSQL 18 se diseñó desde cero, con \u003Cstrong>190 tablas\u003C/strong>, y se\nacompaña de:\u003C/p>\n\u003Cul>\n\u003Cli>consultas críticas \u003Cstrong>verificadas al compilar\u003C/strong>: si una consulta no encaja\ncon el esquema, el proyecto no compila;\u003C/li>\n\u003Cli>\u003Cstrong>planes de ejecución revisados\u003C/strong> sobre volúmenes sintéticos de datos, para\ndetectar consultas lentas antes de que existan usuarios;\u003C/li>\n\u003Cli>un \u003Cstrong>paquete de contenido\u003C/strong> que separa lo que el operador publica\n(catálogo, muebles, textos) de los datos de los jugadores;\u003C/li>\n\u003Cli>la correspondencia documentada entre el esquema antiguo y el nuevo, que\nusará el migrador.\u003C/li>\n\u003C/ul>\n\u003Ch2>7. Configuración: dos archivos, sin sorpresas\u003C/h2>\n\u003Cp>Un hotel se configura con dos archivos y nada más:\u003C/p>\n\u003Cul>\n\u003Cli>\u003Cstrong>\u003Ccode>config.toml\u003C/code>\u003C/strong>: lo que el operador ajusta (límites, monedas, ritmos,\ncomandos, plugins).\u003C/li>\n\u003Cli>\u003Cstrong>\u003Ccode>.env\u003C/code>\u003C/strong>: los secretos (contraseñas, claves), nunca mezclados con lo\nanterior.\u003C/li>\n\u003C/ul>\n\u003Cp>Hay un orden de precedencia claro, validación al arrancar con mensajes que\nindican qué clave está mal, y un comando para comprobar la configuración sin\narrancar el servidor.\u003C/p>\n\u003Ch2>8. El núcleo del emulador: ya conecta\u003C/h2>\n\u003Cp>Lo último en completarse es el \u003Cstrong>núcleo del servidor del juego\u003C/strong>. Hoy el\nemulador ya puede:\u003C/p>\n\u003Cul>\n\u003Cli>arrancar y \u003Cstrong>apagarse de forma ordenada\u003C/strong>, guardando lo pendiente;\u003C/li>\n\u003Cli>aceptar conexiones WebSocket seguras (con TLS opcional) y validar el origen\ny la IP real tras un proxy;\u003C/li>\n\u003Cli>\u003Cstrong>autenticar con tickets de un solo uso\u003C/strong> de 60 segundos;\u003C/li>\n\u003Cli>mantener la conexión con latido, límites de ritmo y de tamaño y cierres con\ncódigos claros;\u003C/li>\n\u003Cli>\u003Cstrong>proteger contra abusos\u003C/strong>: límites de conexiones nuevas, de conexiones sin\nautenticar y de intentos de saludo fallidos;\u003C/li>\n\u003Cli>impedir sesiones duplicadas: si el mismo usuario entra desde otro sitio, la\nsesión anterior termina de guardar antes de que empiece la nueva;\u003C/li>\n\u003Cli>ofrecer comandos de línea: \u003Ccode>serve\u003C/code>, \u003Ccode>migrate\u003C/code>, \u003Ccode>config check\u003C/code> y \u003Ccode>ticket\u003C/code>.\u003C/li>\n\u003C/ul>\n\u003Cp>Este núcleo pasó además por una \u003Cstrong>revisión adversaria\u003C/strong> (un revisor sin el\ncontexto de la implementación) y por pruebas de mutantes sobre las partes\ncríticas, para comprobar que las pruebas realmente detectan los fallos.\u003C/p>\n\u003Ch2>9. Calidad: cómo se vigila\u003C/h2>\n\u003Cul>\n\u003Cli>Formato y análisis estático sin avisos en Rust y TypeScript.\u003C/li>\n\u003Cli>Pruebas automáticas contra una base de datos PostgreSQL 18 real, no contra\nsimulaciones.\u003C/li>\n\u003Cli>Comprobación de \u003Cstrong>licencias\u003C/strong> de todas las dependencias: solo licencias\npermisivas en el servidor.\u003C/li>\n\u003Cli>Integración continua que ejecuta todo lo anterior en cada cambio.\u003C/li>\n\u003Cli>Documentación comprobada: más de 3 900 enlaces y 156 diagramas verificados\nautomáticamente.\u003C/li>\n\u003C/ul>\n\u003Ch2>10. Lo que viene\u003C/h2>\n\u003Cp>Este informe cubre una parte de lo hecho. En próximas entregas:\u003C/p>\n\u003Col>\n\u003Cli>\u003Cstrong>Los dominios del emulador\u003C/strong>: salas, movimiento, muebles, catálogo,\nsocial, economía...\u003C/li>\n\u003Cli>\u003Cstrong>El sistema de plugins\u003C/strong>: componentes WebAssembly con permisos reales y\n91 puntos de extensión.\u003C/li>\n\u003Cli>\u003Cstrong>El motor gráfico y el cliente\u003C/strong>: el diseño visual completo, con un\nsistema de ventanas propio.\u003C/li>\n\u003Cli>\u003Cstrong>El migrador\u003C/strong>: trasladar un hotel existente a Rivuko.\u003C/li>\n\u003C/ol>\n\u003Chr>\n\u003Cp>\u003Cem>Rivuko es software propietario de Faladium Studios.\u003C/em>\u003C/p>\n"}},uses:{params:["slug"]}}],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
